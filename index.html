@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500&family=Lobster&family=Montserrat:wght@100&family=Oswald&family=Roboto+Condensed:wght@300&family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500&family=Lobster&family=Montserrat:wght@100&family=Oswald&family=Roboto+Condensed:wght@300&family=Russo+One&family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500&family=Dancing+Script:wght@700&family=Lobster&family=Montserrat:wght@100&family=Oswald&family=Roboto+Condensed:wght@300&family=Russo+One&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://media.istockphoto.com/vectors/india-flag-vector-id1270270387?k=20&m=1270270387&s=612x612&w=0&h=kqeg6rhMZpO4xiEXmDgueNE68SYmis1qgiCpNvyv3eU=">
+
+    <title>Historical Places Of India</title>
+    <!-- I have used flexboxes inside grids for designing this website -->
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        /* Below is the main grid with all template areas */
+        .maingrid{
+            display:grid;
+        grid-template-areas: 'header''griditem1''griditem2''griditem3''griditem4'
+        'griditem5''griditem6''griditem7''griditem8''griditem9''griditem10''footer';
+        grid-gap: 1.2rem;
+        background-color:rgb(241, 212, 117);
+        }
+        .items{
+            background-image:linear-gradient(180deg,rgb(237, 151, 22),white,green);
+            font-family: 'Oswald', sans-serif;
+            font-size:1.4rem;
+            padding:0.6rem;
+            margin:0.6rem;
+            border:2px solid black;
+            border-radius:10px;
+        }
+        header{
+            grid-area: header;
+            text-align:center;
+            position:sticky;
+            top:0px;
+            background-image: linear-gradient(150deg,rgb(237, 151, 22),white,green);
+            background-repeat: repeat;
+            font-family: 'Lobster';
+            font-size: 2.4rem;
+            padding-top:1rem;
+            margin:0.4rem 0.1rem;
+            height:8vh;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .flexmembers1{
+            display:flex;
+            flex-direction:row;
+            flex-wrap: nowrap;
+        }
+        .flexmembers2{
+            display:flex;
+            flex-direction:row;
+            flex-wrap: nowrap;
+        }
+        #griditem1{
+            grid-area: griditem1;
+        }
+        #griditem2{
+            grid-area: griditem2;
+        }
+        #griditem3{
+            grid-area: griditem3;
+        }
+        #griditem4{
+            grid-area: griditem4;
+        }
+        #griditem5{
+            grid-area: griditem5;
+        }
+        #griditem6{
+            grid-area: griditem6;
+        }
+        #griditem7{
+            grid-area: griditem7;
+        }
+        #griditem8{
+            grid-area: griditem8;
+        }
+        #griditem9{
+            grid-area: griditem9;
+        }
+        #griditem10{
+            grid-area: griditem10;
+        }
+        footer{
+            grid-area: footer;
+            text-align:center;
+            position:sticky;
+            bottom:0px;
+            color:white;
+            font-size:1.2rem;
+            font-weight: bold;
+            padding:0.1rem;
+            margin-top:0.4rem;
+            background-color: black;
+        }
+        img{
+            height:40vh;
+            width:40vw;
+            border-radius:30px;
+            margin:0.8rem;
+        }
+        img:hover{
+            cursor:pointer;
+        }
+        span{
+            margin:1.2rem;
+        }
+        audio{
+            width:25rem;
+            margin:1rem;
+        }
+        /* media queries used for making website responsive */
+        @media only screen and (min-width:1134px) and (max-width:1419px){
+            .items{
+                font-size: 1.2rem;
+            }
+            header{
+                font-size: 2.2rem;
+            }
+            footer{
+                font-size: 0.9rem;
+            }
+
+
+        }
+        @media only screen and (min-width:972px) and (max-width:1134px){
+            img{
+                height:28rem ;
+                width:28rem;
+            }
+            .maingrid{
+                grid-gap:1.2rem;
+            }
+            .flexmembers1{
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            .flexmembers2{
+                flex-wrap:wrap-reverse;
+                align-items: center;
+                justify-content: center;
+            }
+
+            span{
+                margin:0.5rem;
+            }
+
+        }
+        @media only screen and (min-width:490px) and (max-width:972px){
+            img{
+                height:25rem;
+                width:25rem;
+            }
+            header{
+                font-size: 2.0rem;
+            }
+            footer{
+                font-size:0.7rem;
+            }
+            .items{
+                font-size: 1rem;
+            }
+            .maingrid{
+                grid-gap:1.2rem;
+            }
+            .flexmembers1{
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            .flexmembers2{
+                flex-wrap:wrap-reverse;
+                align-items: center;
+                justify-content: center;
+            }
+
+            span{
+                margin:0.5rem;
+            }
+
+        }
+        @media only screen and (min-width:0px) and (max-width:490px){
+            img{
+                height:19rem;
+                width:19rem;
+            }
+            header{
+                font-size: 1.6rem;
+            }
+            footer{
+                font-size:0.7rem;
+            }
+            .items{
+                font-size: 0.9rem;
+            }
+            .maingrid{
+                grid-gap:1.2rem;
+            }
+            .flexmembers1{
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            .flexmembers2{
+                flex-wrap:wrap-reverse;
+                align-items: center;
+                justify-content: center;
+            }
+
+            span{
+                margin:0.5rem;
+            }
+            audio{
+                width:15rem;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="maingrid" class="items">
+        <header>Historical Places Of India</header>
+        <div id="griditem1" class="items flexmembers1">
+            <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGFqJTIwbWFoYWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Taj Mahal">
+            <span>Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan (1628–1658) to house the tomb of his favourite wife, Mumtaz Mahal. The tomb is the centrepiece of a 17-hectare (42-acre) complex and is set in formal gardens bounded on three sides by a crenellated wall.Construction of the mausoleum was essentially completed in 1643, but work continued on other phases of the project for another 10 years. The Taj Mahal complex is believed to have been completed in its entirety in 1653 at a cost estimated at the time to be around ₹32 million, which in 2020 would be approximately ₹70 billion. The construction project employed some 20,000 artisans under the guidance of a board of architects led by the court architect to the emperor, Ustad Ahmad Lahauri. <br>
+            <a href="https://en.wikipedia.org/wiki/Taj_Mahal" target="_blank">More Info</a>
+            </span>
+        </div>
+        <div id="griditem2" class="items flexmembers2">
+            <span>
+                The Red Fort is a historic fort in Old Delhi, Delhi in India that served as the main residence of the Mughal Emperors. Emperor Shah Jahan commissioned construction of the Red Fort on 12 May 1638, when he decided to shift his capital from Agra to Delhi.Originally red and white, the fort represents the peak in Mughal architecture under Shah Jahan, and combines Persianate palace architecture with Indian traditions. The fort's defensive walls were largely undamaged, and the fortress was subsequently used as a garrison.On 15 August 1947, the first Prime Minister of India, Jawaharlal Nehru, raised the Indian flag above the Lahori Gate. Every year on India's Independence Day, the Prime Minister hoists the Indian tricolour flag at the fort and delivers a nationally broadcast speech from its ramparts. <br><a href="https://en.wikipedia.org/wiki/Red_Fort" target="_blank">More Info</a>
+            </span>
+            <img src="https://media.istockphoto.com/photos/red-fort-picture-id539025914?k=20&m=539025914&s=612x612&w=0&h=DsiLvBqFfEoSoeTOrkr9FK3EdQBuzZ6Swt9x_0ZjMhA=" alt="">
+
+        </div>
+        <div id="griditem3" class="items flexmembers1">
+            <img src="https://images.unsplash.com/photo-1545126126-ebea588ee202?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+            <span>The Hawa Mahal is a palace in the city of Jaipur, India. Built from red and pink sandstone, it is on the edge of the City Palace, Jaipur, and extends to the Zenana, or women's chambers.The structure was built in 1799 by the Maharaja Sawai Pratap Singh the founder of the city of Jaipur, India.He was inspired by the unique structure of Khetri Mahal and built this grand and historical palace.It was designed by Lal Chand Ustad. Its five-floor exterior is akin to a honeycomb with its 953 small windows called Jharokhas decorated with intricate latticework. The original intent of the lattice design was to allow royal ladies to observe everyday life and festivals celebrated in the street below without being seen. This architectural feature also allowed cool air from the Venturi effect to pass through, making the whole area more pleasant during the high temperatures in summer. <br><a href="https://en.wikipedia.org/wiki/Hawa_Mahal" target="_blank">More Info </a></span>
+        </div>
+        <div id="griditem4" class="items flexmembers2">
+            <span>India Gate is a war memorial located astride the Rajpath, on the eastern edge of the "ceremonial axis" of New Delhi. It stands as a memorial to 84,000 soldiers of the British Indian Army who died in between 1914 and 1921 in the First World War.13,300 servicemen's names, including some soldiers and officers from the United Kingdom, are inscribed on the gate. Designed by Sir Edwin Lutyens, the gate evokes the architectural style of the memorial arch such as the Arch of Constantine, in Rome, and is often compared to the Arc de Triomphe in Paris, and the Gateway of India in Mumbai.Following the Bangladesh Liberation war in 1972, a structure consisting of a black marble plinth with a reversed rifle, capped by a war helmet and bounded by four eternal flames, was built beneath the archway. This structure, called Amar Jawan Jyoti, has since 1971 served as India's tomb of the unknown soldier <br><a href="https://en.wikipedia.org/wiki/India_Gate" target="_blank">More Info</a></span>
+            <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aW5kaWElMjBnYXRlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div id="griditem5" class="items flexmembers1">
+            <img src="https://media.istockphoto.com/photos/sun-temple-picture-id1327095675?k=20&m=1327095675&s=612x612&w=0&h=KvOg3kvCAC5lNVS9vdsZbTl1o7c-JmHWtwLH6HSi-og=" alt="">
+            <span>Konark Temple is a 13th-century CE Sun temple at Konark in Puri district, Odisha, India.Dedicated to the Hindu Sun God Surya, what remains of the temple complex has the appearance of a 100-foot high chariot with immense wheels and horses, all carved from stone. Once over 200 feet high, much of the temple is now in ruins, in particular the large shikara tower over the sanctuary; at one time this rose much higher than the mandapa that remains. The structures and elements that have survived are famed for their intricate artwork, iconography, and themes, including erotic kama and mithuna scenes. Also called the Surya Devalaya, it is a classic illustration of the Odisha style of Architecture or Kalinga architecture.The cause of the destruction of the Konark temple is unclear and still remains a source of controversy.<br><a href="https://en.wikipedia.org/wiki/Konark_Sun_Temple" target="_blank">More Info</a></span>
+        </div>
+        <div id="griditem6" class="items flexmembers2">
+            <span>The Gateway of India is an arch-monument built in the early 20th century in the city of Mumbai, India. It was erected to commemorate the landing of King-Emperor George V, the first British monarch to visit India, in December 1911 at Ramchandani Road near Shyamaprasad Mukherjee Chowk. The foundation stone was laid in March 1913 for a monument built in the Indo-Saracenic style, incorporating elements of 16th-century Gujarati architecture. The final design of the monument by architect George Wittet was sanctioned only in 1914, and construction was completed in 1924. The structure is a memorial arch made of basalt, which is 26 metres (85 feet) high, with an architectural resemblance to a triumphial arch as well as Gujarati architecture of the time.After its construction the Gateway was used as a symbolic ceremonial entrance to India for important colonial personnel. <br><a href="https://en.wikipedia.org/wiki/Gateway_of_India" target="_blank">More Info</a></span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mumbai_03-2016_30_Gateway_of_India.jpg/375px-Mumbai_03-2016_30_Gateway_of_India.jpg" alt="">
+        </div>
+        <div id="griditem7" class="items flexmembers1"> 
+            <img src="https://media.istockphoto.com/photos/shore-temple-in-mahabalipuram-tamil-nadu-india-picture-id494925444?k=20&m=494925444&s=170667a&w=0&h=kG7uTuLbt1n7tNuPsnkq9ItLYUBFmkuW_Zc3j2xewc0=" alt="">
+            <span>Mahabalipuram, is a town in Chengalpattu district in the southeastern Indian state of Tamil Nadu, best known for the UNESCO World Heritage Site of 7th- and 8th-century Hindu Group of Monuments at Mahabalipuram. It is one of the famous tourist sites in India.Mamallapuram was one of two major port cities in the Pallava kingdom. The town was named after Pallava king Narasimhavarman I, who was also known as Mamalla. Along with economic prosperity, it became the site of a group of royal monuments, many carved out of the living rock. These are dated to the 7th and 8th centuries: rathas, mandapas, the giant open-air rock relief the Descent of the Ganges, and the Shore Temple dedicated to Shiva.The contemporary town plan was established by the British Raj in 1827. <br><a href="https://en.wikipedia.org/wiki/Mamallapuram" target="_blank">More Info</a></span>
+
+        </div>
+        <div id="griditem8" class="items flexmembers2">
+            <span>The Qutub Minar is a minaret and "victory tower" that forms part of the Qutb complex, which lies at the site of Delhi's oldest fortified city, Lal Kot, founded by the Tomar Rajputs.It is a UNESCO World Heritage Site in the Mehrauli area of South Delhi, India. It can be compared to the 62-metre all-brick Minaret of Jam in Afghanistan, of c.1190, which was constructed a decade or so before the probable start of the Delhi tower.The surfaces of both are elaborately decorated with inscriptions and geometric patterns. The Qutb Minar has a shaft that is fluted with "superb stalactite bracketing under the balconies" at the top of each stage.<br><a href="https://en.wikipedia.org/wiki/Qutb_Minar" target="_blank">More Info</a></span>
+            <img src="https://media.istockphoto.com/photos/qutub-minar-delhi-india-picture-id545444198?k=20&m=545444198&s=612x612&w=0&h=4mJiW-zmZasgD1aTjD6HNTM3i1hgA0j05xkHbkCekGk=" alt="">
+            
+
+        </div>
+        <div id="griditem9" class="items flexmembers1">
+            <img src="https://media.istockphoto.com/photos/mahabodhi-temple-bodh-gaya-india-picture-id578079914?k=20&m=578079914&s=612x612&w=0&h=rQvjrrw1Ko51nC68ZbuEVERzXMNJ4Znnpwl17UJbix0=" alt="">
+            <span>The Mahabodhi Temple, a UNESCO World Heritage Site, is an ancient, but much rebuilt and restored, Buddhist temple in Bodh Gaya, marking the location where the Buddha is said to have attained enlightenment.The site has been a major pilgrimage destination for Hindus and Buddhists. The site contains a descendant of the Bodhi Tree under which Buddha gained enlightenment, and has been a major pilgrimage destination of Buddhists for well over two thousand years, and some elements date to the period of Ashoka (died c. 232 BCE). What is now visible on the ground essentially dates from the 5th century CE, or possibly earlier, as well as several major restorations since the 19th century. But the structure now may well incorporate large parts of earlier work, possibly from the 2nd or 3rd century CE.<br><a href="https://en.wikipedia.org/wiki/Mahabodhi_Temple" target="_blank">More Info</a></span>
+
+        </div>
+        <div id="griditem10" class="items flexmembers2 ">
+            <audio style="display:inline-block;"src="OurNationalAnthemAudio.mp3" controls></audio>
+            <span>Jana Gana Mana is the national anthem of the Republic of India. It was originally composed as Bharoto Bhagyo Bidhata in Bengali by polymath Rabindranath Tagore.The first stanza of the song was adopted by the Constituent Assembly of India as the National Anthem on 24 January 1950.</span>
+        </div>
+        <footer>Copyright&copy; &nbsp;Designed and Developed by Ritvik Sharma.</footer>
+
+    </div>
+
+    
+</body>
+</html>
